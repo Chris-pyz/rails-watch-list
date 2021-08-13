@@ -3,3 +3,11 @@
 <%= link_to 'Add a movie', new_list_bookmark_path(@list) %> |
 <%= link_to 'Back', lists_path %> |
 <%= link_to "delete list", list_path(@list), method: :delete, data: {confirm: 'Are you sure ?'}%>
+
+<% @list.bookmarks.each do |bookmark| %>
+<br>
+<hr>
+  <%= bookmark.movie.title %>
+  <br>
+  <%= bookmark.comment %>
+<% end %>
