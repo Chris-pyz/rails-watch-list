@@ -1,13 +1,38 @@
-<h6><%= @list.name %></h6>
+
+<div class='container'>
+<div class="row justify-content-center">
+
+<h2><%= @list.name %></h2>
+</div>
+</div>
 <hr>
-<%= link_to 'Add a movie', new_list_bookmark_path(@list) %> |
-<%= link_to 'Back', lists_path %> |
-<%= link_to "delete list", list_path(@list), method: :delete, data: {confirm: 'Are you sure ?'}%>
 
 <% @list.bookmarks.each do |bookmark| %>
 <br>
 <hr>
-  <%= bookmark.movie.title %>
+<h3><%= bookmark.movie.title %></h3>
   <br>
   <%= bookmark.comment %>
 <% end %>
+
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to "#", class: "navbar-brand" do %>
+  <% end %>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to 'Add a movie', new_list_bookmark_path(@list), class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Back', lists_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "delete list", list_path(@list), method: :delete, data: {confirm: 'Are you sure ?'}, class: "nav-link" %>
+      </li>
+      <li class="nav-item dropdown">
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
