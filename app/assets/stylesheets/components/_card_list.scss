@@ -5,3 +5,7 @@
   border-radius: 5px;
   box-shadow: 3px 4px 5px grey;
 }
+.card_list:hover {
+  transform: translate(-15px);
+  transition: 0.3s;
+}
