@@ -34,14 +34,12 @@
 </div>
 
 
-
+<% @lists.each do |list| %>
 <div class='container'>
-  <div class="row justify-content-center">
 
-    <% @lists.each do |list| %>
     <div class="row justify-content-center card_list">
       <%= link_to list.name, list %>
-      <% end %>
-    </div>
+
   </div>
 </div>
+<% end %>
